@@ -1,0 +1,31 @@
+{
+
+	"manifest_version": 2,
+	"name": "Invert Image",
+	"version": "2.5.5",
+
+	"description": "Inverts color of an image/(any block of page) white to black for comfortable night reading.",
+	"homepage_url": "https://github.com/vycb/InvertImageOpera",
+
+	"icons": {
+		"48": "icons/icon-48.png",
+		"64": "icons/icon-64.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["main.js"],
+			"all_frames": true
+		}
+	],
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"permissions": [
+		"contextMenus"
+	]
+}
+
